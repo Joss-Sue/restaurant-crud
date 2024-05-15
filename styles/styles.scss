@@ -1,0 +1,259 @@
+$mustard: #FC9B29;
+$chocolate: #3E0F04;
+$brown: #8A3106;
+
+@font-face {
+    font-family: 'Objectivity';
+    font-style: bold;
+    font-weight: 700;
+    src: url(/Objectivity/Objectivity-Black.otf) format('otf'),
+      url(/Objectivity/Objectivity-Black.woff2) format('woff2');
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+nav{
+    font-family: 'Objectivity';
+    background-color: $brown;
+    padding: 10px 0px 10px 0px;
+    .row{
+        div{
+            &:first-child{
+                text-align: start;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                label{
+                    border-radius: 13px;
+                    font-size: 30px;
+                    text-decoration: none;
+                    color: white;
+                    background-color: #6B7727;
+                    padding: 10px 9px 10px 9px;
+                    margin-left: 30px;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+            &:nth-child(2){
+                text-align: center;
+                img{
+                    width: 180px
+                }
+            }
+            &:nth-child(3){
+                text-align: end;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                a{
+                    border-radius: 13px;
+                    font-size: 24px;
+                    text-decoration: none;
+                    color: black;
+                    background-color: $mustard;
+                    padding: 16px 11px 12px 11px;
+                }
+            }
+        }
+    }
+}
+
+#home-banner{
+    background-color: $chocolate;
+    p{
+        color: white;
+        font-family: "Poppins", sans-serif;
+        font-weight: 900;
+    }
+
+    .text-section{
+        height: 83vh;
+        div{
+            &:nth-child(1){
+                text-align: center;
+                margin-top: 60px;
+                p{
+                    &:nth-child(1){
+                        font-size: 100px;
+                        rotate: -6.58deg;
+                    }
+                    &:nth-child(2){
+                        font-size: 80px;
+                        margin-top: -50px;
+                    }
+                    &:nth-child(3){
+                        font-size: 25px;
+                        margin-top: -20px;
+                    }
+                    &:nth-child(4){
+                        font-size: 25px;
+                        margin-top: -25px;
+                    }
+                }
+            }
+            &:nth-child(2){
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: space-around;
+                justify-content: center;
+                align-items: center;
+                a{
+                    border-radius: 13px;
+                    text-decoration: none;
+                    color: black;
+                    font-family: 'Objectivity';
+                    background-color: #EAD7AC;
+                    font-size: 32px;
+                    padding: 10px;
+                    &:hover{
+                        background-image: url('../resource/cow-texture.png');
+                        -webkit-text-stroke: 0.5px white;
+                    }
+                }
+                p{
+                    font-size: 48px;
+                    margin: 0px 25px 0px 25px;
+                }
+            }
+        }
+    }
+
+    .img-section{
+        img{
+            height: 80vh;
+            margin-top: 7px;
+        }
+    }
+}
+
+#menu{
+    background-color: $mustard;
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+    h1{
+        font-family: "Poppins", sans-serif;
+        font-weight: 900;
+        color: black;
+        font-size: 96px;
+    }
+    svg{
+        max-height: 70vh;
+        .svg-text, .cerdo{
+            cursor: pointer;
+            fill: green;
+
+        }
+        .pecho, .panza, .lomo, .lomo-enmedio, .lomo-final{
+            &:hover{
+                cursor: pointer;
+                fill: green;
+                & ~ .svg-text, .cerdo{
+                    fill: black;
+                    cursor: pointer;
+                }
+                & ~ .cerdo{
+                    fill: black;
+                    cursor: pointer;
+                }
+            }
+        }
+        .cabeza, .vacio, .muslo{
+            &:hover{
+                cursor: pointer;
+                fill: green;
+            }
+        }
+    }
+}
+
+/* menú lateral*/
+
+#btn-menu{
+    display: none;
+}
+
+.container-menu {
+    z-index: 1;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+  
+#btn-menu:checked ~ .container-menu {
+    opacity: 1;
+    visibility: visible;
+}
+  
+.cont-menu {
+    width: 100%;
+    max-width: 250px;
+    background: $brown;
+    height: 100vh;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+}
+  
+#btn-menu:checked ~ .container-menu .cont-menu {
+    transform: translateX(0%);
+}
+
+#bar{
+    text-align: center;
+    background-color: #FC9B29;
+    h1{
+        color: black;
+        font-family: 'Objectivity';
+        font-size: 20px;
+        margin: 0px;
+        padding: 10px 0px 5px 0px;
+    }
+}
+  
+.cont-menu {
+    nav {
+      transform: translateY(15%);
+  
+      a {
+        display: block;
+        text-decoration: none;
+        padding: 20px;
+        color: #c7c7c7;
+        border-left: 5px solid transparent;
+        transition: all 400ms ease;
+  
+        &:hover {
+          border-left: 5px solid #c7c7c7;
+          background: $mustard;
+          color: black;
+        }
+      }
+    }
+  
+    label {
+      position: absolute;
+      right: 5px;
+      top: 10px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 18px;
+    }
+}

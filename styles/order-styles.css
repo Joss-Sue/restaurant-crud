@@ -1,0 +1,204 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Objectivity";
+  font-style: bold;
+  font-weight: 700;
+  src: url(../Objectivity/Objectivity-Black.otf) format("otf"), url(../Objectivity/Objectivity-Black.woff2) format("woff2");
+}
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+nav {
+  font-family: "Objectivity";
+  background-color: #8A3106;
+  padding: 10px 0px 10px 0px;
+}
+nav .row div:first-child {
+  text-align: start;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+nav .row div:first-child label {
+  border-radius: 13px;
+  font-size: 30px;
+  text-decoration: none;
+  color: white;
+  background-color: #6B7727;
+  padding: 10px 9px 10px 9px;
+  margin-left: 30px;
+}
+nav .row div:first-child label:hover {
+  cursor: pointer;
+}
+nav .row div:nth-child(2) {
+  text-align: center;
+}
+nav .row div:nth-child(2) img {
+  width: 180px;
+}
+nav .row div:nth-child(3) {
+  text-align: end;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav .row div:nth-child(3) a {
+  border-radius: 13px;
+  font-size: 24px;
+  text-decoration: none;
+  color: black;
+  background-color: #FC9B29;
+  padding: 16px 11px 12px 11px;
+}
+
+/* menú lateral*/
+#btn-menu {
+  display: none;
+}
+
+.container-menu {
+  z-index: 1;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transition: all 500ms ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#btn-menu:checked ~ .container-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cont-menu {
+  width: 100%;
+  max-width: 250px;
+  background: #8A3106;
+  height: 100vh;
+  position: relative;
+  transition: all 500ms ease;
+  transform: translateX(-100%);
+}
+
+#btn-menu:checked ~ .container-menu .cont-menu {
+  transform: translateX(0%);
+}
+
+.cont-menu nav {
+  transform: translateY(15%);
+}
+.cont-menu nav a {
+  display: block;
+  text-decoration: none;
+  padding: 20px;
+  color: #c7c7c7;
+  border-left: 5px solid transparent;
+  transition: all 400ms ease;
+}
+.cont-menu nav a:hover {
+  border-left: 5px solid #c7c7c7;
+  background: #FC9B29;
+  color: black;
+}
+.cont-menu label {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* fin menu lateral*/
+#Order {
+  margin: 0px 0px 20px 0px;
+}
+#Order .order-top {
+  text-align: center;
+  font-family: "Objectivity";
+  margin: 20px 0px;
+  font-size: 70px;
+}
+#Order .do-order div {
+  margin-bottom: 20px;
+}
+#Order .do-order div .food-card {
+  display: flex;
+}
+#Order .do-order div .food-card img {
+  max-width: 160px;
+}
+#Order .do-order div .food-card .food-text {
+  padding: 0px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+#Order .do-order div .food-card .food-text .title-price {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Poppins", sans-serif;
+}
+#Order .do-order div .food-card .food-text .title-price h2:first-child {
+  font-style: italic;
+  font-weight: 900;
+}
+#Order .do-order div .food-card .food-text .title-price h2:nth-child(2) {
+  font-weight: 900;
+}
+#Order .do-order div .food-card .food-text p {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+}
+#Order .do-order div .incdec-button {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  justify-content: center;
+}
+#Order .do-order div .incdec-button div {
+  max-width: 50%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  border: solid #F00001 2px;
+  border-radius: 20px;
+}
+#Order .do-order div .incdec-button div button {
+  background-color: transparent;
+  border: none;
+  width: 70px;
+}
+#Order .do-order div .incdec-button div p {
+  margin: 0px 5px 0px 5px;
+}
+#Order .order-now {
+  text-align: center;
+}
+#Order .order-now button {
+  background-color: #F00001;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 25px;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+}
+
+/*# sourceMappingURL=order-styles.css.map */
